@@ -9,3 +9,8 @@
 // also want to call this function again when the user saves their preferences to
 // immediately apply them. Make sure you also notify the user somehow that the preferences
 // were saved.
+function applyPreferences() { // Function command that retrieves and applies user preferences over from local storage
+    const name = localStorage.getItem('name'); // Retrieves the 'name' from local storage using the "const" command
+    const backgroundColor = localStorage.getItem('background-color'); // Retrieves the 'background-color' from local storage using the "const" command
+    const foregroundColor = localStorage.getItem('foreground-color'); // Retrieves the 'foreground-color' from local storage using the "const" command
+}

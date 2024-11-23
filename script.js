@@ -31,4 +31,12 @@ function savePreferences(event) { // Function command designed to save the user'
     const name = document.getElementById('name').value; // Stores the name value to the local storage
     const backgroundColor = document.getElementById('background-color').value; // Stores the background color to the local storage
     const foregroundColor = document.getElementById('foreground-color').value; // Stores the foreground color to the local storage
+    
+    localStorage.setItem('name', name); // Stores the name value to the local storage
+    localStorage.setItem('background-color', backgroundColor); // Stores the selected background color value to the local storage
+    localStorage.setItem('foreground-color', foregroundColor); // Stores the selected foreground color value to the local storage
+    alert('Preferences saved!'); // Pop-up that notifies the user that their preferences were saved
+    applyPreferences(); // Applies the user's preferences after they saves their changes
 }
+document.getElementById('preferences-form').addEventListener('submit', savePreferences); // An event listener designed to listen for the submission of the form
+window.onload = applyPreferences; // Applies the user's preferences whenever the page loads

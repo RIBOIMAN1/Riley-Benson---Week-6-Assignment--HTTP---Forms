@@ -24,3 +24,11 @@ function applyPreferences() { // Function command that retrieves and applies use
         document.body.style.color = foregroundColor; // Sets the text color of the body with the retrieved color
     }
 }
+
+function savePreferences(event) { // Function command designed to save the user's preferences to local storage
+    event.preventDefault(); // Prevents the default action from occurring when submitting a form
+    
+    const name = document.getElementById('name').value; // Stores the name value to the local storage
+    const backgroundColor = document.getElementById('background-color').value; // Stores the background color to the local storage
+    const foregroundColor = document.getElementById('foreground-color').value; // Stores the foreground color to the local storage
+}

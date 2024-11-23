@@ -13,4 +13,14 @@ function applyPreferences() { // Function command that retrieves and applies use
     const name = localStorage.getItem('name'); // Retrieves the 'name' from local storage using the "const" command
     const backgroundColor = localStorage.getItem('background-color'); // Retrieves the 'background-color' from local storage using the "const" command
     const foregroundColor = localStorage.getItem('foreground-color'); // Retrieves the 'foreground-color' from local storage using the "const" command
+
+    if (name) { // Checks if 'name' exists within local storage using the "if" command
+        document.getElementById('greeting').textContent = `Welcome, ${name}!`; // Sets the greeting text with the retrieved name
+    }
+    if (backgroundColor) { // Checks if 'background-color' exists within local storage using the "if" command
+        document.body.style.backgroundColor = backgroundColor; // Sets the background color of the body with the retrieved color
+    }
+    if (foregroundColor) { // Checks if 'foreground-color' within local storage exists using the "if" command
+        document.body.style.color = foregroundColor; // Sets the text color of the body with the retrieved color
+    }
 }
